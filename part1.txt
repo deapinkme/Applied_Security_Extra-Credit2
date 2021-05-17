@@ -10,3 +10,4 @@ For every string in the password list:
     Do the same hashing as in extras.py/hash_pword(salt, pword) of the application
     Chack if the hash matches the given one
 
+Password list taken from rockyou <https://www.kaggle.com/wjburns/common-password-list-rockyoutxt>
