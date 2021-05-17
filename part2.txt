@@ -1,0 +1,18 @@
+How it works:
+
+For each password in the password list
+    Try to login via HTTP request
+
+The HTTP request for the login page has its own URL.
+After successful login:
+    - Either the response redirects to a success page (response status code 302)
+    - Or the response contains some string indicating success
+
+For different sites this program has to be tuned as follows:
+- Change POST to GET request if the site does not accept it
+- Change success_code to failure_code as some sites, for example return 401 status code
+  upon login failure
+- Change the success_substring to failure_substring if we know that the login failure response
+  contains a specific substring
+  
+-- Andrea M. Stojanovski
