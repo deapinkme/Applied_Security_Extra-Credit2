@@ -1,0 +1,12 @@
+Result:
+
+deapinkme@DESKTOP-2S6I6T1:~/homework/appsec_EC2$ python pwcrack.py 
+The password is: adminpassword
+Completed.
+
+How it works:
+Split the salt and the password hash from the gicen string.
+For every string in the password list:
+    Do the same hashing as in extras.py/hash_pword(salt, pword) of the application
+    Chack if the hash matches the given one
+
