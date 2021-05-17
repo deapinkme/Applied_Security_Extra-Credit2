@@ -15,4 +15,5 @@ For different sites this program has to be tuned as follows:
 - Change the success_substring to failure_substring if we know that the login failure response
   contains a specific substring
   
+  
 -- Andrea M. Stojanovski
