@@ -1,3 +1,4 @@
+import base64
 from binascii import hexlify
 from hashlib import sha256
 
@@ -7,6 +8,8 @@ def hash_pword(salt, pword): # from extras.py
     hasher = sha256()
     hasher.update(RANDOM_SEED)
     hasher.update(pword.encode('utf-8'))
+    print(hasher.hexdigest())
+    print(salt)
     return hasher.hexdigest()
 
 def password_crack(pwFile, pwHash):
@@ -15,7 +18,7 @@ def password_crack(pwFile, pwHash):
     for line in afile:
         # print(line.strip()) # test
         currPW = line.strip()
-        if hash_pword(salt, currPW) == pwHash: # check that currPW and then hash are str
+        if hash_pword(RANDOM_SEED, currPW) == pwHash: # check that currPW and then hash are str
             print("The password is: " + currPW)
             break
         
