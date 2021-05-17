@@ -12,3 +12,5 @@ For every string in the password list:
 
 Password list taken from rockyou <https://www.kaggle.com/wjburns/common-password-list-rockyoutxt>
 rockyou.txt is not included in the repository (its ignored in .gitignore) because it is huge.
+
+--Andrea M. Stojanovski
